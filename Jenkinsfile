@@ -6,7 +6,7 @@ pipeline {
                 parallel(
                     web: {
                         dir("web") {
-                            echo "===== OPTIONAL: Will build the website (if needed) ====="
+                            sh "docker build . -t christensenkim/devopscalc-web"
                         }
                     },
                     api: {
