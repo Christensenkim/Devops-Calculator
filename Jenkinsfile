@@ -5,13 +5,13 @@ pipeline {
             steps {
                 parallel(
                     web: {
-                        dir("") {
+                        dir("web") {
                             echo "===== OPTIONAL: Will build the website (if needed) ====="
                         }
                     },
                     api: {
-                        dir("src/DevopsCalculatorBackend/DevopsCalculator") {
-                            sh "dotnet build src/DevopsCalculatorBackend/DevopsCalculator/DevopsCalculatorBackend.csproj"
+                        dir("api") {
+                            sh "dotnet build"
                             sh "docker build . -t christensenkim/DevopsCalc"
                         }
                     },
