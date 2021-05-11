@@ -17,7 +17,7 @@ pipeline {
                     },
                     db: {
                         dir("") {
-                            echo "===== OPTIONAL: Will build the database (if using a state-based approach) ====="
+                            sh "docker-compose up -d"
                         }
                     }
                 )
