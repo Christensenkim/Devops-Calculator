@@ -16,7 +16,7 @@ pipeline {
                         }
                     },
                     db: {
-                        dir("") {
+                        {
                             sh "docker-compose up -d"
                         }
                     }
