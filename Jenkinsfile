@@ -35,7 +35,7 @@ pipeline {
                 {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }
-                sh "docker push christensenkim/devopscalc-web"
+                sh "docker push christensenkim/devopscalc-web:${BUILD_NUMBER}"
             }
         }
         stage("Deliver API") {
@@ -44,7 +44,7 @@ pipeline {
                 {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }
-                sh "docker push christensenkim/devopscalc"
+                sh "docker push christensenkim/devopscalc:${BUILD_NUMBER}"
             }
         }
         stage("Release staging environment") {
