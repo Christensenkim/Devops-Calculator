@@ -1,4 +1,4 @@
-FROM nginx
+FROM node:latest as build
 
 WORKDIR /usr/share/nginx/html
 COPY ./ /usr/share/nginx/html
@@ -7,5 +7,5 @@ RUN npm install
 RUN npm run build
 
 FROM nginx:latest
-COPY --from=build /usr/local/app/dist/sample-angular-app /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/Devops-Calculator /usr/share/nginx/html
 EXPOSE 80
