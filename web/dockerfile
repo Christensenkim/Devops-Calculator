@@ -1,11 +1,12 @@
 FROM node:latest as build
 
-WORKDIR /usr/share/nginx/html
-COPY ./ /usr/share/nginx/html
-
+RUN mkdir -p /app
+WORKDIR /app
+COPY package.json /app
 RUN npm install
-RUN npm run build
+COPY . /app
+RUN npm run build --prod
+
 
 FROM nginx:latest
-COPY --from=build /usr/local/app/dist/Devops-Calculator /usr/share/nginx/html
-EXPOSE 80
+COPY --from=build-step /app/dist/calculator-web /usr/share/nginx/html
