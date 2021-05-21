@@ -49,7 +49,8 @@ pipeline {
         }
         stage("Release staging environment") {
             steps {
-                echo "===== REQUIRED: Will use Selenium to execute automatic acceptance tests ====="
+                sh "docker-compose pull"
+				sh "docker-compose up -d"
             }
         }
         stage("Automated acceptance test") {
