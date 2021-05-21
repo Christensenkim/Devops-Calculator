@@ -31,17 +31,25 @@ pipeline {
         }
         stage("Deliver Web") {
             steps {
-                echo "===== REQUIRED: Will deliver the website to Docker Hub ====="
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-devopscalc', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
+                {
+                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
+                }
+                sh "docker push christensenkim/devopscalc-web"
             }
         }
         stage("Deliver API") {
             steps {
-                echo "===== REQUIRED: Will deliver the API to Docker Hub ====="
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-devopscalc', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
+                {
+                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
+                }
+                sh "docker push christensenkim/devopscalc"
             }
         }
         stage("Release staging environment") {
             steps {
-                echo "===== REQUIRED: Will use Docker Compose to spin up a test environment ====="
+                echo "===== REQUIRED: Will use Selenium to execute automatic acceptance tests ====="
             }
         }
         stage("Automated acceptance test") {
