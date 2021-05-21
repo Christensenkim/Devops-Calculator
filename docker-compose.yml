@@ -20,3 +20,19 @@ services:
       - ./db:/flyway/conf
     depends_on: 
       - app-database
+
+  frontend:
+    image: christensenkim/devopscalc
+    depends_on: 
+      - application
+    ports: 
+      - 23002:80
+
+  application:
+    image: christensenkim/devopscalc
+    environment: 
+      ASPNETCORE_ENVIRONMENT: Development
+    depends_on: 
+      - app-database
+    ports: 
+      - 23001:80
