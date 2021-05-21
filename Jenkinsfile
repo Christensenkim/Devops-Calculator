@@ -6,13 +6,13 @@ pipeline {
                 parallel(
                     web: {
                         dir("web") {
-                            sh "docker build . -t christensenkim/devopscalc-web:${BUILD_NUMBER}"
+                            sh "docker build . -t christensenkim/devopscalc-web"
                         }
                     },
                     api: {
                         dir("api") {
                             sh "dotnet build"
-                            sh "docker build . -t christensenkim/devopscalc:${BUILD_NUMBER}"
+                            sh "docker build . -t christensenkim/devopscalc"
                         }
                     },
                     db: {
