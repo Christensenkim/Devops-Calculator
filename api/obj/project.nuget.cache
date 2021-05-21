@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ppTDYoOXoyC4F/29ImhJzR0x/u6i2hT7bSQzHeso086Snv90j2Fe2G070bBHXcvNkybq3I0c+IYPmK9o3L4XKQ==",
+  "dgSpecHash": "mU3U8DoRRtHpUqqHosM3W5AAxK+vFM+Pc+Gy/FBMvKakSrdhz8H1Mgf6z30P/owpoRi4nxUbakJOXgxWdEInMQ==",
   "success": true,
-  "projectFilePath": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+  "projectFilePath": "C:\\Skole\\Food Planner\\Devops-Calculator\\api\\devops-calculator-api.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
