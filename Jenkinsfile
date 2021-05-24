@@ -6,13 +6,13 @@ pipeline {
                 parallel(
                     web: {
                         dir("web") {
-                            sh "docker build -t christensenkim/devopscalc-web:${BUILD_NUMBER} ."
+                            sh "docker build -t christensenkim/devopscalc-web ."
                         }
                     },
                     api: {
                         dir("api") {
                             sh "dotnet build"
-                            sh "docker build . -t christensenkim/devopscalc:${BUILD_NUMBER}"
+                            sh "docker build . -t christensenkim/devopscalc"
                         }
                     },
                     db: {
@@ -35,7 +35,7 @@ pipeline {
                 {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }
-                sh "docker push christensenkim/devopscalc-web:${BUILD_NUMBER}"
+                sh "docker push christensenkim/devopscalc-web"
             }
         }
         stage("Deliver API") {
@@ -44,12 +44,11 @@ pipeline {
                 {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }
-                sh "docker push christensenkim/devopscalc:${BUILD_NUMBER}"
+                sh "docker push christensenkim/devopscalc:"
             }
         }
         stage("Release staging environment") {
             steps {
-                sh "docker run --name devops-calc -d -p 23333 christensenkim/devopscalc-web:${BUILD_NUMBER}"
                 sh "docker-compose pull"
 				sh "docker-compose up -d"
             }
