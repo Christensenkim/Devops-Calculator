@@ -49,6 +49,7 @@ pipeline {
         }
         stage("Release staging environment") {
             steps {
+                sh "docker run --name devops-calc -d -p 23333 christensenkim/devopscalc-web:${BUILD_NUMBER}"
                 sh "docker-compose pull"
 				sh "docker-compose up -d"
             }
