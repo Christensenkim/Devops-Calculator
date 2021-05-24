@@ -6,11 +6,11 @@ services:
         environment: 
             ASPNETCORE_ENVIRONMENT: Test
         ports: 
-            - 23002:80
+            - 25002:80
 
     application:
         image: christensenkim/devopscalc:${BUILD_NUMBER}
         environment: 
             ASPNETCORE_ENVIRONMENT: Test
         ports: 
-            - 23001:80
+            - 25001:80
