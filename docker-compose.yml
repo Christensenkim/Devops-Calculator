@@ -22,11 +22,9 @@ services:
       - app-database
 
   frontend:
-    image: christensenkim/devopscalc-web:${BUILD_NUMBER}
     depends_on: 
       - application
 
   application:
-    image: christensenkim/devopscalc:${BUILD_NUMBER}
     depends_on: 
       - app-database
