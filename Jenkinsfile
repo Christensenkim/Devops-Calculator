@@ -11,7 +11,7 @@ pipeline {
                     },
                     api: {
                         dir("api") {
-                            sh "dotnet build"
+                            sh "dotnet build api/devops-calculator-api.sln"
                             sh "docker build . -t christensenkim/devopscalc"
                         }
                     },
