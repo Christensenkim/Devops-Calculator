@@ -6,13 +6,13 @@ pipeline {
                 parallel(
                     web: {
                         dir("web") {
-                            sh "docker build -t christensenkim/devopscalc-web ."
+                            sh "docker build -t christensenkim/devopscalc-web:${BUILD_NUMBER} ."
                         }
                     },
                     api: {
                         dir("api") {
                             sh "dotnet build devops-calculator-api.sln"
-                            sh "docker build -t christensenkim/devopscalc ."
+                            sh "docker build -t christensenkim/devopscalc:${BUILD_NUMBER} ."
                         }
                     },
                     db: {
@@ -35,7 +35,7 @@ pipeline {
                 {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }
-                sh "docker push christensenkim/devopscalc-web"
+                sh "docker push christensenkim/devopscalc-web:${BUILD_NUMBER}"
             }
         }
         stage("Deliver API") {
@@ -44,7 +44,7 @@ pipeline {
                 {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }
-                sh "docker push christensenkim/devopscalc"
+                sh "docker push christensenkim/devopscalc:${BUILD_NUMBER}"
             }
         }
         stage("Release to test") {

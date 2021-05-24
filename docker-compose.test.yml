@@ -2,10 +2,12 @@ version: "3.3"
 
 services:
     frontend:
+        image: christensenkim/devopscalc-web:${BUILD_NUMBER}
         ports: 
             - 23002:80
 
     application:
+        image: christensenkim/devopscalc-web:${BUILD_NUMBER}
         environment: 
             ASPNETCORE_ENVIRONMENT: Test
         ports: 

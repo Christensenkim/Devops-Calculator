@@ -2,10 +2,12 @@ version: "3.3"
 
 services:
     frontend:
+        image: christensenkim/devopscalc-web:${PROMOTE_BUILD_NUMBER}
         ports:
             - 24002:80
 
     application:
+        image: christensenkim/devopscalc:${PROMOTE_BUILD_NUMBER}
         environment: 
             ASPNETCORE_ENVIRONMENT: Production
         ports: 

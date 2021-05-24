@@ -22,11 +22,9 @@ services:
       - app-database
 
   frontend:
-    image: christensenkim/devopscalc-web
     depends_on: 
       - application
 
   application:
-    image: christensenkim/devopscalc
     depends_on: 
       - app-database
