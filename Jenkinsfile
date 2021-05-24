@@ -17,7 +17,7 @@ pipeline {
                     },
                     db: {
                         dir("") {
-                            sh "docker-compose up -d"
+                            // sh "docker-compose up -d"
                         }
                     }
                 )
@@ -49,6 +49,7 @@ pipeline {
         }
         stage("Release to test") {
             steps {
+                sh "docker-compose pull"
 				sh "docker-compose -p test -f docker-compose.yml -f docker-compose.test.yml up -d"
             }
         }
