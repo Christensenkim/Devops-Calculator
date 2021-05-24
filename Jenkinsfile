@@ -50,7 +50,7 @@ pipeline {
         stage("Release to test") {
             steps {
                 sh "docker-compose pull"
-				sh "docker-compose -f docker-compose.yml -f docker-compose.test.yml up -d"
+				sh "docker-compose -p test -f docker-compose.yml -f docker-compose.test.yml up -d"
             }
         }
         stage("Automated acceptance test") {
