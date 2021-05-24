@@ -4,13 +4,10 @@ services:
   app-database:
     image: mysql
     restart: always
-    volumes:
-      - ./db/data:/var/lib/mysql
     environment: 
       MYSQL_ROOT_PASSWORD: Adm1npassword
       MYSQL_DATABASE: CalculationsDB
-    ports:
-      - 63306:3306
+    
 
   flyway:
     image: flyway/flyway
