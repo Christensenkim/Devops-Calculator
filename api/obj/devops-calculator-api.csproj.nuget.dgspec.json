@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Skole\\Food Planner\\Devops-Calculator\\api\\devops-calculator-api.csproj": {}
+    "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj": {}
   },
   "projects": {
-    "C:\\Skole\\Food Planner\\Devops-Calculator\\api\\devops-calculator-api.csproj": {
+    "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Skole\\Food Planner\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+        "projectUniqueName": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
         "projectName": "devops-calculator-api",
-        "projectPath": "C:\\Skole\\Food Planner\\Devops-Calculator\\api\\devops-calculator-api.csproj",
-        "packagesPath": "C:\\Users\\prixz\\.nuget\\packages\\",
-        "outputPath": "C:\\Skole\\Food Planner\\Devops-Calculator\\api\\obj\\",
+        "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+        "packagesPath": "C:\\Users\\Draik\\.nuget\\packages\\",
+        "outputPath": "C:\\Work-DevOps\\Devops-Calculator\\api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\prixz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Draik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
