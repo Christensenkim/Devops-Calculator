@@ -44,7 +44,7 @@ pipeline {
                 {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }
-                sh "docker push christensenkim/devopscalc:"
+                sh "docker push christensenkim/devopscalc"
             }
         }
         stage("Release staging environment") {
