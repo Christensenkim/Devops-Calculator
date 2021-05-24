@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+    frontend:
+        ports: 
+            - 23002:80
+
+    application:
+        environment: 
+            ASPNETCORE_ENVIRONMENT: Test
+        ports: 
+            - 23001:80

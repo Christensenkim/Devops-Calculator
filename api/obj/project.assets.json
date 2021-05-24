@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Draik\\.nuget\\packages\\": {}
+    "C:\\Users\\rufst\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+      "projectUniqueName": "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj",
       "projectName": "devops-calculator-api",
-      "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
-      "packagesPath": "C:\\Users\\Draik\\.nuget\\packages\\",
-      "outputPath": "C:\\Work-DevOps\\Devops-Calculator\\api\\obj\\",
+      "projectPath": "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+      "packagesPath": "C:\\Users\\rufst\\.nuget\\packages\\",
+      "outputPath": "C:\\Skole\\Devops-Calculator\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Draik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rufst\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

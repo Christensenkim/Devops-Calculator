@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q7LBHnW0clQuoyNEK+Cb2CQmipXvfM207WkkZ6SMj9bEHeErB0ZYexsLIjEWZyaO8BSOcAPP27BipgXCwVag0A==",
+  "dgSpecHash": "fkEB+4nStvRY2qD8IpiagDnxzjUGLmUSmq4q7j1wza47BBq/nnSXXcG/WaeEsp5yfzvmieGxUJ2F7jTc0HtoUQ==",
   "success": true,
-  "projectFilePath": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+  "projectFilePath": "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -47,10 +47,10 @@ pipeline {
                 sh "docker push christensenkim/devopscalc"
             }
         }
-        stage("Release staging environment") {
+        stage("Release to test") {
             steps {
                 sh "docker-compose pull"
-				sh "docker-compose up -d"
+				sh "docker-compose -f docker-compose.yml -f docker-compose.test.yml up -d"
             }
         }
         stage("Automated acceptance test") {

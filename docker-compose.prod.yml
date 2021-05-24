@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+    frontend:
+        ports:
+            - 24002:80
+
+    application:
+        environment: 
+            ASPNETCORE_ENVIRONMENT: Production
+        ports: 
+            - 24001:80
