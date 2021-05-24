@@ -6,7 +6,7 @@ pipeline {
                 parallel(
                     web: {
                         dir("web") {
-                            sh "docker build . -t christensenkim/devopscalc-web:${BUILD_NUMBER}"
+                            sh "docker build -t christensenkim/devopscalc-web:${BUILD_NUMBER} ."
                         }
                     },
                     api: {
