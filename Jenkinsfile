@@ -52,10 +52,20 @@ pipeline {
 				sh "docker-compose -p test -f docker-compose.yml -f docker-compose.test.yml up -d"
             }
         }
-        stage("Automated acceptance test") {
+        stage("Selenium grid") {
             steps {
-                echo "===== REQUIRED: Will use Selenium to execute automatic acceptance tests ====="
+                sh "docker network create SE"
+                sh "docker run -d --rm -p 4444:4444 --net=SE --name selenium-hub selenium/hub"
+                sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox"
+                sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node-chrome"
+                sh "docker run -d --rm --net=SE --name app-test-container christensenkim/devopscalc"
             }
         }
+        stage("Execute selenium") [
+            steps {
+                sh "selenium-side-runner --server http://185.51.76.19:25002/ -c 'browserName=firefox' --base-url http://app-test-container test/system/FunctionalTests.side"
+                sh "selenium-side-runner --server http://185.51.76.19:25002/ -c 'browserName=chrome' --base-url http://app-test-container test/system/FunctionalTests.side"
+            }
+        ]
     }
 }
