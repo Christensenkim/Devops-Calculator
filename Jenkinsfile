@@ -61,11 +61,11 @@ pipeline {
                 sh "docker run -d --rm --net=SE --name app-test-container christensenkim/devopscalc"
             }
         }
-        stage("Execute selenium") [
+        stage("Execute selenium") {
             steps {
                 sh "selenium-side-runner --server http://185.51.76.19:25002/ -c 'browserName=firefox' --base-url http://app-test-container test/system/FunctionalTests.side"
                 sh "selenium-side-runner --server http://185.51.76.19:25002/ -c 'browserName=chrome' --base-url http://app-test-container test/system/FunctionalTests.side"
             }
-        ]
+        }
     }
 }
