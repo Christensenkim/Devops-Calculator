@@ -70,7 +70,6 @@ pipeline {
     }
     post {
         cleanup {
-            echo "hello"
             sh script:"docker stop selenium-hub", returnStatus:true
             sh script:"docker stop selenium-node-firefox", returnStatus:true
             sh script:"docker stop selenium-node-chrome", returnStatus:true
