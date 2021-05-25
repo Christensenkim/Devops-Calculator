@@ -67,5 +67,14 @@ pipeline {
                 sh "selenium-side-runner --server http://185.51.76.19:25002/ -c 'browserName=chrome' --base-url http://app-test-container test/system/FunctionalTests.side"
             }
         }
+        post {
+            cleanup {
+                sh script:"docker stop selenium-hub", returnStatus:true
+                sh script:"docker stop selenium-node-firefox", returnStatus:true
+                sh script:"docker stop selenium-node-chrome", returnStatus:true
+                sh script:"docker stop app-test-container", returnStatus:true
+                sh script:"docker network remove SE", returnStatus:true
+            }
+        }
     }
 }
