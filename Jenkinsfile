@@ -1,9 +1,3 @@
-String payload = "${payload}"
-def jsonObject = readJSON text: payload
-String gitHash = "${jsonObject.pull_request.head.sha}"
-
-sh "git checkout ${gitHash}"
-
 pipeline {
     agent any
     stages {
