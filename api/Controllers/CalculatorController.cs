@@ -34,8 +34,18 @@ namespace devops_calculator_api.Controllers
 
         // POST api/<CalculatorController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<string> Post([FromBody] string value)
         {
+            try
+            {
+                string result = _calculatorService.Calculate(value);
+                return Ok(result);
+            }
+            catch
+            {
+                return null;
+                // return StatusCode(500, "error");
+            }
         }
 
         // PUT api/<CalculatorController>/5
