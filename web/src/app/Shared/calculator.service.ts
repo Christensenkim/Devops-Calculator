@@ -17,6 +17,6 @@ export class CalculatorService {
   }
 
   test(): Observable<string[]> {
-    return this.http.get<string[]>('https://localhost:44314/Calculator', httpOptions);
+    return this.http.get<string[]>(environment.webAPIURL, httpOptions);
   }
 }

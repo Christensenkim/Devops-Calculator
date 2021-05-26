@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  webAPIURL: 'https://localhost:44314/api/Calculator'
+  webAPIURL: 'https://localhost:44314/Calculator'
 };
 
 /*

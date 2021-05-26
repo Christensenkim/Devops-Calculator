@@ -14,7 +14,9 @@ export class CalculatorComponent implements OnInit {
   constructor(private service: CalculatorService) { }
 
   ngOnInit(): void {
-    this.testvalue = this.service.test();
+    this.testvalue = this.service.test().subscribe(things => {
+      this.testvalue = things;
+    });
   }
 
   tester(): void {
