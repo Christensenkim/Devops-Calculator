@@ -1,8 +1,9 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
+import {Observable} from 'rxjs';
 
-const httpoptions = {
+const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
   })
@@ -17,5 +18,9 @@ export class CalculatorService {
 
   test(): void {
     console.log(this.http.get(environment.webAPIURL + 'api/calculator'));
+  }
+
+  calculate(screen: string | undefined): Observable<string> {
+    return this.http.post<string>(environment.webAPIURL + 'api/calculator', screen, httpOptions);
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CalculatorService} from '../Shared/calculator.service';
 
 @Component({
   selector: 'app-calculator',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
-  constructor() { }
+  constructor(private service: CalculatorService) { }
   screen: string | undefined;
   number1: string | undefined;
   number2: string | undefined;
@@ -36,13 +37,16 @@ export class CalculatorComponent implements OnInit {
   }
 
   result(): void {
+    this.service.calculate(this.screen).subscribe(answer => {
+      this.screen = answer;
+    });
   }
 
   clear(): void {
     this.screen = '';
     this.calcCondition = '';
-    this.operand1 = '';
-    this.operand2 = '';
+    this.number1 = '';
+    this.number2 = '';
     this.value = '';
   }
 }
