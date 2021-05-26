@@ -7,29 +7,47 @@ import {CalculatorService} from '../Shared/calculator.service';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
+  constructor(private service: CalculatorService) { }
   screen: string | undefined;
+  number1: string | undefined;
+  number2: string | undefined;
+  calcCondition: string | undefined;
+  calcResult: number | undefined;
   private value: any;
   testvalue: any;
 
-  constructor(private service: CalculatorService) { }
-
   ngOnInit(): void {
-    this.testvalue = this.service.test().subscribe(things => {
-      this.testvalue = things;
-    });
+    this.screen = '';
   }
 
   entervalue(value: any): void {
-    this.value = value;
+    if ((this.calcCondition === '+') || (this.calcCondition === '-') || (this.calcCondition === '*') || (this.calcCondition === '/')) {
+      this.calcResult = this.calcResult + value;
+      this.screen = this.screen + value;
+      this.number1 = this.screen;
+    }
+    else{
+      this.screen = this.screen + value;
+      this.number2 = this.screen;
+    }
   }
 
-  condition(s: string): void {
+  condition(value: any): void {
+    this.screen = this.screen + value;
+    this.calcCondition = value;
   }
 
   result(): void {
+    this.service.calculate(this.screen).subscribe(answer => {
+      this.screen = answer;
+    });
   }
 
   clear(): void {
     this.screen = '';
+    this.calcCondition = '';
+    this.number1 = '';
+    this.number2 = '';
+    this.value = '';
   }
 }
