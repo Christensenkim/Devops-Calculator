@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace devops_calculator_api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CalculatorController : ControllerBase
     {
@@ -20,7 +20,7 @@ namespace devops_calculator_api.Controllers
 
         // GET: api/<CalculatorController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<string[]> Get()
         {
             return new string[] { "value1", "value2", "value3" };
         }

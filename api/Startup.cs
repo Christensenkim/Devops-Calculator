@@ -31,6 +31,17 @@ namespace devops_calculator_api
             services.AddScoped<ICalculatorService, CalculatorService>();
             services.AddScoped<ICalculatorRepository, CalculatorRepository>();
             services.AddControllers();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("TodoItOptions",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:4200", "https://localhost:4200")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +52,7 @@ namespace devops_calculator_api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("TodoItOptions");
             app.UseHttpsRedirection();
 
             app.UseRouting();

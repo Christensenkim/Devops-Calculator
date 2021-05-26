@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CalculatorService} from '../Shared/calculator.service';
 
 @Component({
   selector: 'app-calculator',
@@ -8,15 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
   screen: string | undefined;
   private value: any;
+  testvalue: any;
 
-  constructor() { }
+  constructor(private service: CalculatorService) { }
 
   ngOnInit(): void {
+    this.testvalue = this.service.test();
+  }
+
+  tester(): void {
+    console.log(this.testvalue);
   }
 
   entervalue(value: any): void {
     this.value = value;
-
   }
 
   condition(s: string): void {
