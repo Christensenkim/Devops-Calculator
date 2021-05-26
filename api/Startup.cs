@@ -1,3 +1,6 @@
+using BLL.Interfaces;
+using DAL.Interfaces;
+using DAL.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +28,8 @@ namespace devops_calculator_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ICalculatorService, CalculatorService>();
+            services.AddScoped<ICalculatorRepository, CalculatorRepository>();
             services.AddControllers();
         }
 

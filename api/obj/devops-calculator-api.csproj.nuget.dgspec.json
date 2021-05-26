@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj": {}
+    "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj": {}
   },
   "projects": {
-    "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj": {
+    "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+        "projectUniqueName": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
         "projectName": "devops-calculator-api",
-        "projectPath": "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj",
-        "packagesPath": "C:\\Users\\rufst\\.nuget\\packages\\",
-        "outputPath": "C:\\Skole\\Devops-Calculator\\api\\obj\\",
+        "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+        "packagesPath": "C:\\Users\\Draik\\.nuget\\packages\\",
+        "outputPath": "C:\\Work-DevOps\\Devops-Calculator\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rufst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Draik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,7 +27,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj"
+              },
+              "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -57,7 +64,125 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj",
+        "projectName": "BLL",
+        "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\Draik\\.nuget\\packages\\",
+        "outputPath": "C:\\Work-DevOps\\Devops-Calculator\\BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Draik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Draik\\.nuget\\packages\\",
+        "outputPath": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Draik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
