@@ -8,11 +8,17 @@ import {CalculatorService} from './Shared/calculator.service';
 })
 export class AppComponent {
   title = 'calculator-web';
+  screen = '';
 
-  constructor(private service: CalculatorService) {
+  entervalue(s: string): void {
   }
 
-  test(): void {
-    this.service.test();
+  condition(s: string): void {
+  }
+
+  result(): void {
+  }
+
+  clear(): void {
   }
 }

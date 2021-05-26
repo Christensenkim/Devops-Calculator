@@ -1,1 +1,32 @@
-<button (click)="test">test</button>
+<div class="full" >
+  <div class="calculator"> <input type="text" [(ngModel)]="screen"> </div>
+  <div class="container">
+    <b>
+      <h1>
+        <input type="button" (click)='entervalue("1")' value="1">
+        <input type="button" (click)='entervalue("2")' value="2">
+        <input type="button" (click)='entervalue("3")' value="3">
+        <input type="button" (click)='condition("+")' value="+">
+      </h1>
+      <h1>
+        <input type="button" (click)='entervalue("4")' value="4">
+        <input type="button" (click)='entervalue("5")' value="5">
+        <input type="button" (click)='entervalue("6")' value="6">
+        <input type="button" (click)='condition("-")' value="-">
+      </h1>
+      <h1>
+        <input type="button" (click)='entervalue("7")' value="7">
+        <input type="button" (click)='entervalue("8")' value="8">
+        <input type="button" (click)='entervalue("9")' value="9">
+        <input type="button" (click)='condition("*")' value="*">
+      </h1>
+      <h1>
+        <input type="button" (click)='entervalue("0")' value="0">
+        <input type="button" (click)='condition("/")' value="/">
+        <input type="button" (click)='result()' value="=">
+        <input type="button" (click)='clear()' value="C">
+      </h1>
+    </b>
+  </div>
+
+</div>
