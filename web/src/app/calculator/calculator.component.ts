@@ -50,4 +50,10 @@ export class CalculatorComponent implements OnInit {
     this.number2 = '';
     this.value = '';
   }
+
+  testBackend(): void {
+    this.service.test().subscribe(answer => {
+      this.screen = answer[0];
+    });
+  }
 }
