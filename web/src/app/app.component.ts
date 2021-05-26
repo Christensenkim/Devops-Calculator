@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CalculatorService} from './Shared/calculator.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculator-web';
+
+  constructor(private service: CalculatorService) {
+  }
+
+  test(): void {
+    this.service.test();
+  }
 }
