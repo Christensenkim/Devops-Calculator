@@ -19,10 +19,6 @@ export class CalculatorComponent implements OnInit {
     });
   }
 
-  tester(): void {
-    console.log(this.testvalue);
-  }
-
   entervalue(value: any): void {
     this.value = value;
   }
