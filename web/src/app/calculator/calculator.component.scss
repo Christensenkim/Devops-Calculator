@@ -1,0 +1,27 @@
+.container input {
+  background: cadetblue;
+  color: white;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  border: 2px solid red;
+  margin: 2px;
+  font-size: xx-large;
+}
+
+.calculator input {
+  width: 410px;
+  height: 55px;
+  border-radius: 8px;
+  border: 3px solid rebeccapurple;
+  background-color: lightcyan;
+  font-size: xx-large;
+}
+
+.full {
+  border: 10px solid grey;
+  margin: auto;
+  padding: 12px;
+  width: 417px;
+  border-radius: 20px;
+}
