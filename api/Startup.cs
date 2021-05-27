@@ -32,7 +32,7 @@ namespace devops_calculator_api
         {
             string connection = "Server=185.51.76.19;Port=33306;Database=CalculationsDB;Uid=root;Pwd=Adm1npassword;";
 
-            services.AddDbContext<CalculatorDBContext>(opt => opt.UseMySQL(connection));
+            services.AddDbContext<CalculatorDBContext>(opt => opt.UseMySql(connection, new MySqlServerVersion(new Version(8,0,11))));
             
 
             services.AddScoped<ICalculatorService, CalculatorService>();
@@ -57,12 +57,6 @@ namespace devops_calculator_api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDeveloperExceptionPage();
-                using (var scope = app.ApplicationServices.CreateScope())
-                {
-                    var ctx = scope.ServiceProvider.GetService<CalculatorDBContext>();
-                    ctx.Database.EnsureCreated();
-                }
             }
 
             app.UseCors("TodoItOptions");
