@@ -37,7 +37,7 @@ namespace devops_calculator_api
                 options.AddPolicy("TodoItOptions",
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:4200", "https://localhost:4200", "http://185.51.76.19:25002", "http://185.51.76.19:24002")
+                        builder.AllowAnyOrigin()
                             .AllowAnyHeader()
                             .AllowAnyMethod();
                     });
