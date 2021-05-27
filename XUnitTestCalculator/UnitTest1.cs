@@ -54,7 +54,7 @@ namespace XUnitTestCalculator
         [Theory]
         [InlineData("10/5", "2")]
         [InlineData("50/50", "1")]
-        [InlineData("1/2", "0,5")]
+        [InlineData("1/2", "0.5")]
         [InlineData("80/8", "10")]
         public void TestDevide(string test, string expected)
         {
