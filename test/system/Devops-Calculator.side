@@ -1,0 +1,320 @@
+{
+  "id": "cd62f46f-0eca-413a-8c29-6a27ebf17415",
+  "version": "2.0",
+  "name": "Devops-Calculator",
+  "url": "http://185.51.76.19:25002",
+  "tests": [{
+    "id": "a9d4a1e8-87ef-4cd2-a988-bd8b7b3ff904",
+    "name": "Test Add",
+    "commands": [{
+      "id": "2f1f689d-b62d-4c60-a62a-35fe9b0b9cff",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11961119-0621-4e06-9d70-420c32ca4b74",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27518db4-143d-446c-abb7-8a8fe8f253f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(3) > input:nth-child(2)",
+      "targets": [
+        ["css=h1:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='5']", "xpath:attributes"],
+        ["xpath=//h1[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bcb2d6af-162a-42f5-9150-d2f402717db5",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(2) > input:nth-child(4)",
+      "targets": [
+        ["css=h1:nth-child(2) > input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='+']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cf531f4-aaad-4884-8b04-95d59360b95d",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(4) > input:nth-child(1)",
+      "targets": [
+        ["css=h1:nth-child(4) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='7']", "xpath:attributes"],
+        ["xpath=//h1[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b1292ff-94c5-4563-a416-de09829e7633",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(5) > input:nth-child(3)",
+      "targets": [
+        ["css=h1:nth-child(5) > input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='=']", "xpath:attributes"],
+        ["xpath=//h1[4]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2af7a8d-66f2-489c-84fd-c316ee2909d4",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=.ng-untouched",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "12"
+    }]
+  }, {
+    "id": "ecd1b023-0ad2-474f-8c9c-e8d7dd138d5a",
+    "name": "Test Substract",
+    "commands": [{
+      "id": "19db3b1d-0af0-4c4e-966f-bcf958c1cc07",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61f01349-077b-4f86-ac72-0a57bddb28ab",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x616",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1311b4aa-0775-4cbc-9aeb-04ae463f8e59",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(3) > input:nth-child(2)",
+      "targets": [
+        ["css=h1:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='5']", "xpath:attributes"],
+        ["xpath=//h1[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df162994-c010-4331-abf0-b3eae3239592",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(3) > input:nth-child(4)",
+      "targets": [
+        ["css=h1:nth-child(3) > input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='-']", "xpath:attributes"],
+        ["xpath=//h1[2]/input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36ae9992-669f-42c9-b8b8-93859233d4d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(4) > input:nth-child(1)",
+      "targets": [
+        ["css=h1:nth-child(4) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='7']", "xpath:attributes"],
+        ["xpath=//h1[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c7cb997-47d4-4341-a71f-d1aba8edf57c",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(5) > input:nth-child(3)",
+      "targets": [
+        ["css=h1:nth-child(5) > input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='=']", "xpath:attributes"],
+        ["xpath=//h1[4]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dff25458-ed13-4671-88e1-ad26b720a349",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=.ng-untouched",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-2"
+    }]
+  }, {
+    "id": "07196024-4c3a-4c42-a6ef-e44544bd6e7c",
+    "name": "Test Multiply",
+    "commands": [{
+      "id": "2efaccbc-4bcd-4815-8760-712e313f974e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6bf4a03-58e3-434b-8edb-a84ef5704792",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x616",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf52c03b-7fa3-4d09-9d02-01124f45923d",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(3) > input:nth-child(2)",
+      "targets": [
+        ["css=h1:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='5']", "xpath:attributes"],
+        ["xpath=//h1[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05693d34-7700-4607-9dca-52e10c44eb72",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(4) > input:nth-child(4)",
+      "targets": [
+        ["css=h1:nth-child(4) > input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='*']", "xpath:attributes"],
+        ["xpath=//h1[3]/input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8d9e3d1-e82e-447d-8f6a-605f25b5cae5",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(3) > input:nth-child(2)",
+      "targets": [
+        ["css=h1:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='5']", "xpath:attributes"],
+        ["xpath=//h1[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "607c2997-1282-4fd4-8c1b-63261dadd320",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(5) > input:nth-child(3)",
+      "targets": [
+        ["css=h1:nth-child(5) > input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='=']", "xpath:attributes"],
+        ["xpath=//h1[4]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "832a93a4-0695-4176-bfb0-53b30d1b3703",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=.ng-untouched",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "25"
+    }]
+  }, {
+    "id": "5769cf56-0dda-4bd5-bced-d3fd6329f4df",
+    "name": "Test Divide",
+    "commands": [{
+      "id": "112af05c-088d-4a25-a301-4added33defe",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd1bf0c1-9588-434c-88ec-98ce2ba20bbf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x616",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b48fcb4b-3551-4176-aec1-bb026428556a",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(3) > input:nth-child(2)",
+      "targets": [
+        ["css=h1:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='5']", "xpath:attributes"],
+        ["xpath=//h1[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f687b9d-013a-49c2-bf0a-253c8f1a3ddb",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(5) > input:nth-child(1)",
+      "targets": [
+        ["css=h1:nth-child(5) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='0']", "xpath:attributes"],
+        ["xpath=//h1[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "965a4ccc-400e-444e-b313-e086b17b8205",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(5) > input:nth-child(2)",
+      "targets": [
+        ["css=h1:nth-child(5) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='/']", "xpath:attributes"],
+        ["xpath=//h1[4]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f33ed2a-5282-4153-b31c-65cce27be3dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(3) > input:nth-child(2)",
+      "targets": [
+        ["css=h1:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='5']", "xpath:attributes"],
+        ["xpath=//h1[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b1c0d73-11ca-487f-9d54-22012d22b16a",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1:nth-child(5) > input:nth-child(3)",
+      "targets": [
+        ["css=h1:nth-child(5) > input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='=']", "xpath:attributes"],
+        ["xpath=//h1[4]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81c521dd-0ff7-411e-8593-b9c5cf8ca99e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=.ng-untouched",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "10"
+    }]
+  }],
+  "suites": [{
+    "id": "29a53ef3-7201-40ec-acf3-b6d8befaa2d7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a9d4a1e8-87ef-4cd2-a988-bd8b7b3ff904", "5769cf56-0dda-4bd5-bced-d3fd6329f4df", "07196024-4c3a-4c42-a6ef-e44544bd6e7c", "ecd1b023-0ad2-474f-8c9c-e8d7dd138d5a"]
+  }],
+  "urls": ["http://185.51.76.19:25002/"],
+  "plugins": []
+}
