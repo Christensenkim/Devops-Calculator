@@ -63,8 +63,8 @@ pipeline {
         }
         stage("Execute selenium") {
             steps {
-                sh "selenium-side-runner --server http://185.51.76.19:25002 -c 'browserName=firefox' --base-url http://app-test-container test/system/Devops-Calculator.side"
-                sh "selenium-side-runner --server http://185.51.76.19:25002 -c 'browserName=chrome' --base-url http://app-test-container test/system/Devops-Calculator.side"
+                sh "selenium-side-runner --server http://185.51.76.19:25002/wd/hub -c 'browserName=firefox' --base-url http://app-test-container test/system/Devops-Calculator.side"
+                sh "selenium-side-runner --server http://185.51.76.19:25002/wd/hub -c 'browserName=chrome' --base-url http://app-test-container test/system/Devops-Calculator.side"
             }
         }
     }
