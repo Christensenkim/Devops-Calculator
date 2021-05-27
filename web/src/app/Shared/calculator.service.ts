@@ -21,6 +21,6 @@ export class CalculatorService {
   }
 
   calculate(screen: string | undefined): Observable<string> {
-    return this.http.post<string>(environment.webAPIURL + 'api/calculator', screen, httpOptions);
+    return this.http.post<string>(environment.webAPIURL + '', JSON.stringify(screen), httpOptions);
   }
 }
