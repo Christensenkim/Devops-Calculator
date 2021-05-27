@@ -68,13 +68,13 @@ pipeline {
             }
         }
     }
-    post {
+    /*post {
         cleanup {
-            /*sh script:"docker stop selenium-hub", returnStatus:true
+            sh script:"docker stop selenium-hub", returnStatus:true
             sh script:"docker stop selenium-node-firefox", returnStatus:true
             sh script:"docker stop selenium-node-chrome", returnStatus:true
             sh script:"docker stop app-test-container", returnStatus:true
-            sh script:"docker network remove SE", returnStatus:true*/
+            sh script:"docker network remove SE", returnStatus:true
         }
-    }
+    }*/
 }
