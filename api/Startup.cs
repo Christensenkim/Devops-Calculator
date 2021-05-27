@@ -34,7 +34,6 @@ namespace devops_calculator_api
 
             services.AddDbContext<CalculatorDBContext>(opt => opt.UseMySql(connection, new MySqlServerVersion(new Version(8,0,11))));
             
-
             services.AddScoped<ICalculatorService, CalculatorService>();
             services.AddScoped<ICalculatorRepository, CalculatorRepository>();
             services.AddControllers();

@@ -10,6 +10,6 @@ namespace DAL.Context
         public CalculatorDBContext(DbContextOptions<CalculatorDBContext> opt)
             : base(opt) { }
 
-        public DbSet<string> CalclulationTable { get; set; }
+        public DbSet<string> Calculations { get; set; }
     }
 }
