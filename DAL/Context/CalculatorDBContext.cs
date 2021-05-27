@@ -7,5 +7,9 @@ namespace DAL.Context
 {
     public class CalculatorDBContext: DbContext
     {
+        public CalculatorDBContext(DbContextOptions<CalculatorDBContext> opt)
+            : base(opt) { }
+
+        public DbSet<string> CalclulationTable { get; set; }
     }
 }
