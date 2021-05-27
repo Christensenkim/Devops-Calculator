@@ -8,3 +8,12 @@ services:
   application:
     depends_on: 
       - app-database
+
+    flyway:
+      image: flyway/flyway
+      command: migrate
+      volumes:
+          - ./db:/flyway/sql
+          - ./db:/flyway/conf
+      depends_on: 
+          - app-database

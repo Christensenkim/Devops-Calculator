@@ -12,15 +12,6 @@ services:
         volumes:
             - ./db/data:/var/lib/mysql
 
-        flyway:
-            image: flyway/flyway
-            command: migrate
-            volumes:
-                - ./db:/flyway/sql
-                - ./db:/flyway/conf
-            depends_on: 
-                - app-database
-
     frontend:
         image: christensenkim/devopscalc-web:${PROMOTE_BUILD_NUMBER}
         ports:
