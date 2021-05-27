@@ -41,7 +41,7 @@ namespace devops_calculator_api
 
             services.AddCors(options =>
             {
-                options.AddPolicy("TodoItOptions",
+                options.AddPolicy("CalcOptions",
                     builder =>
                     {
                         builder.AllowAnyOrigin()
@@ -59,7 +59,7 @@ namespace devops_calculator_api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors("TodoItOptions");
+            app.UseCors("CalcOptions");
             app.UseHttpsRedirection();
 
             app.UseRouting();
