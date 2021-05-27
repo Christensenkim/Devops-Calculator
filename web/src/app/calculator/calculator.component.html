@@ -30,10 +30,15 @@
     </b>
   </div>
 </div>
-<div>
-  <mat-list role="list">
+<div class="full">
+  <mat-list>
+    <mat-list-item>
+      <h3>Calculation history:</h3>
+    </mat-list-item>
+    <h5>
     <mat-list-item *ngFor="let calcHistories of calcHistory">
       {{calcHistories}}
     </mat-list-item>
+    </h5>
   </mat-list>
 </div>

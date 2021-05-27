@@ -10,11 +10,8 @@ namespace DAL.Repositories
 {
     public class CalculatorRepository: ICalculatorRepository
     {
-        
-
         public CalculatorRepository()
         {
-            
         }
 
         public void SaveResult(string s)
@@ -41,7 +38,6 @@ namespace DAL.Repositories
         public string[] ReadCalculations()
         {
             List<string> calcList = new List<string>();
-
             try
             {
                 string connectionString = "server=185.51.76.19;user id=root;password=Adm1npassword;persistsecurityinfo=True;database=CalculationsDB;port=63306";
@@ -60,38 +56,7 @@ namespace DAL.Repositories
                         }
                     }
                 }
-
                 return calcList.ToArray();
-                /*List<string> list = new List<string>();
-                string tempString;
-                string MyConnection2 = "server=185.51.76.19;user id=root;password=Adm1npassword;persistsecurityinfo=True;database=CalculationsDB;port=63306";
-                string Query = "select calchistory from calculations";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                MyConn2.Open();
-                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
-
-                using (var reader = MyCommand2.ExecuteReader())
-
-                {
-                    while (reader.Read())
-                    {
-                        list.Add(reader.GetString(0));
-                    }
-                } */
-                /*while (reader.HasRows)
-                {
-                    list.Add($"{reader.GetString("CalcHistory")}");
-                }*/
-                /*
-                String[] stringArr = list.ToArray();
-                MyConn2.Close();
-                //MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
-                //MyAdapter.SelectCommand = MyCommand2;
-                //DataTable dTable = new DataTable();
-                //MyAdapter.Fill(dTable);
-                //string[] stringArr = dTable.Rows[0].ItemArray.Select(x => x.ToString()).ToArray();
-                
-                return stringArr;*/
             }
             catch (Exception ex)
             {
