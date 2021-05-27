@@ -7,5 +7,6 @@ namespace BLL.Interfaces
     public interface ICalculatorService
     {
         string Calculate(string value);
+        string[] getResults();
     }
 }

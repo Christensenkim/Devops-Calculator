@@ -1,5 +1,4 @@
 using BLL.Interfaces;
-using DAL.Context;
 using DAL.Interfaces;
 using DAL.Repositories;
 using Microsoft.AspNetCore.Builder;
@@ -30,10 +29,6 @@ namespace devops_calculator_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connection = "Server=185.51.76.19;Port=33306;Database=CalculationsDB;Uid=root;Pwd=Adm1npassword;";
-
-            services.AddDbContext<CalculatorDBContext>(opt => opt.UseMySql(connection, new MySqlServerVersion(new Version(8,0,11))));
-            
             services.AddScoped<ICalculatorService, CalculatorService>();
             services.AddScoped<ICalculatorRepository, CalculatorRepository>();
             services.AddControllers();

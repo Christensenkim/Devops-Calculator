@@ -7,6 +7,6 @@ namespace DAL.Interfaces
     public interface ICalculatorRepository
     {
         void SaveResult(string s);
-        IEnumerable<string> ReadCalculations();
+        string[] ReadCalculations();
     }
 }
