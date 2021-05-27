@@ -63,12 +63,13 @@ pipeline {
         }
         stage("Execute selenium") {
             steps {
+                sh 'sleep 3'
                 sh "selenium-side-runner --server http://localhost:4444/wd/hub -c 'browserName=firefox' --base-url http://app-test-container test/system/Devops-Calculator.side"
                 sh "selenium-side-runner --server http://localhost:4444/wd/hub -c 'browserName=chrome' --base-url http://app-test-container test/system/Devops-Calculator.side"
             }
         }
     }
-    /*post {
+    post {
         cleanup {
             sh script:"docker stop selenium-hub", returnStatus:true
             sh script:"docker stop selenium-node-firefox", returnStatus:true
@@ -76,5 +77,5 @@ pipeline {
             sh script:"docker stop app-test-container", returnStatus:true
             sh script:"docker network remove SE", returnStatus:true
         }
-    }*/
+    }
 }

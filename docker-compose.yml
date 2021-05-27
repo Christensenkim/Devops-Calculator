@@ -5,18 +5,12 @@ services:
     image: mysql
     restart: always
     environment: 
-      MYSQL_ROOT_PASSWORD: Adm1npassword
-      MYSQL_DATABASE: CalculationsDB
-    
-
-  flyway:
-    image: flyway/flyway
-    command: migrate
+        MYSQL_ROOT_PASSWORD: Adm1npassword
+        MYSQL_DATABASE: CalculationsDB
     volumes:
-      - ./db:/flyway/sql
-      - ./db:/flyway/conf
-    depends_on: 
-      - app-database
+        - ./db/data:/var/lib/mysql
+    ports:
+      - 33306:3306
 
   frontend:
     depends_on: 
@@ -25,3 +19,12 @@ services:
   application:
     depends_on: 
       - app-database
+
+  flyway:
+    image: flyway/flyway
+    command: migrate
+    volumes:
+        - ./db:/flyway/sql
+        - ./db:/flyway/conf
+    depends_on: 
+        - app-database
