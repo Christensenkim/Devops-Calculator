@@ -14,10 +14,11 @@ export class CalculatorComponent implements OnInit {
   calcCondition: string | undefined;
   calcResult: number | undefined;
   private value: any;
-  testvalue: any;
+  calcHistory: string[] | undefined;
 
   ngOnInit(): void {
     this.screen = '';
+    this.getCalcHistory();
   }
 
   entervalue(value: any): void {
@@ -41,6 +42,7 @@ export class CalculatorComponent implements OnInit {
     this.service.calculate(this.screen).subscribe(answer => {
       this.screen = answer;
     });
+    this.getCalcHistory();
   }
 
   clear(): void {
@@ -54,6 +56,12 @@ export class CalculatorComponent implements OnInit {
   testBackend(): void {
     this.service.test().subscribe(answer => {
       this.screen = answer[0];
+    });
+  }
+
+  getCalcHistory(): void{
+    this.service.test().subscribe(value => {
+      this.calcHistory = value;
     });
   }
 }

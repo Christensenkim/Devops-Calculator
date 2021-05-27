@@ -1,4 +1,5 @@
 ﻿using DAL.Interfaces;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,8 +19,13 @@ namespace BLL.Interfaces
         public string Calculate(string value)
         {
             string calc = new DataTable().Compute(value, null).ToString();
-            Console.WriteLine(calc);
+            _calculatorRepository.SaveResult(value + " = " + calc);
             return calc;
+        }
+
+        public string[] getResults()
+        {
+            return _calculatorRepository.ReadCalculations();
         }
     }
 }

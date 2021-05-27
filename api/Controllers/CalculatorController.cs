@@ -20,9 +20,9 @@ namespace devops_calculator_api.Controllers
 
         // GET: api/<CalculatorController>
         [HttpGet]
-        public ActionResult<string[]> Get()
+        public string[] Get()
         {
-            return new string[] { "value1", "value2", "value3" };
+            return _calculatorService.getResults();
         }
 
         // GET api/<CalculatorController>/5
