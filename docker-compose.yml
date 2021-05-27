@@ -1,23 +1,6 @@
 version: "3.3"
 
 services:
-  app-database:
-    image: mysql
-    restart: always
-    environment: 
-      MYSQL_ROOT_PASSWORD: Adm1npassword
-      MYSQL_DATABASE: CalculationsDB
-    
-
-  flyway:
-    image: flyway/flyway
-    command: migrate
-    volumes:
-      - ./db:/flyway/sql
-      - ./db:/flyway/conf
-    depends_on: 
-      - app-database
-
   frontend:
     depends_on: 
       - application
