@@ -14,13 +14,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "11961119-0621-4e06-9d70-420c32ca4b74",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1936x1096",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "27518db4-143d-446c-abb7-8a8fe8f253f7",
       "comment": "",
       "command": "click",
@@ -65,15 +58,18 @@
       ],
       "value": ""
     }, {
+      "id": "a5c21697-c65d-4381-9045-a6f4ad3937c9",
+      "comment": "",
+      "command": "pause",
+      "target": "100",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "c2af7a8d-66f2-489c-84fd-c316ee2909d4",
       "comment": "",
       "command": "assertValue",
       "target": "css=.ng-untouched",
-      "targets": [
-        ["css=.ng-untouched", "css:finder"],
-        ["xpath=//input[@type='text']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
+      "targets": [],
       "value": "12"
     }]
   }, {
@@ -136,6 +132,13 @@
         ["xpath=//input[@value='=']", "xpath:attributes"],
         ["xpath=//h1[4]/input[3]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "afe0bad1-aded-4d90-b717-687b20bf47de",
+      "comment": "",
+      "command": "pause",
+      "target": "100",
+      "targets": [],
       "value": ""
     }, {
       "id": "dff25458-ed13-4671-88e1-ad26b720a349",
@@ -209,6 +212,13 @@
         ["xpath=//input[@value='=']", "xpath:attributes"],
         ["xpath=//h1[4]/input[3]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "85c36826-b1ed-4b41-9079-e4f4244fd708",
+      "comment": "",
+      "command": "pause",
+      "target": "100",
+      "targets": [],
       "value": ""
     }, {
       "id": "832a93a4-0695-4176-bfb0-53b30d1b3703",
@@ -295,6 +305,13 @@
       ],
       "value": ""
     }, {
+      "id": "0796018d-d2ad-4208-9d04-f6d5810171e9",
+      "comment": "",
+      "command": "pause",
+      "target": "100",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "81c521dd-0ff7-411e-8593-b9c5cf8ca99e",
       "comment": "",
       "command": "assertValue",
@@ -306,10 +323,6 @@
       ],
       "value": "10"
     }]
-  }, {
-    "id": "b13d8435-d2a3-4f36-9e4e-6096bb38109e",
-    "name": "stopper",
-    "commands": []
   }],
   "suites": [{
     "id": "29a53ef3-7201-40ec-acf3-b6d8befaa2d7",
