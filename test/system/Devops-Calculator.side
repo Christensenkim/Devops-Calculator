@@ -313,7 +313,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["a9d4a1e8-87ef-4cd2-a988-bd8b7b3ff904", "5769cf56-0dda-4bd5-bced-d3fd6329f4df", "07196024-4c3a-4c42-a6ef-e44544bd6e7c", "ecd1b023-0ad2-474f-8c9c-e8d7dd138d5a"]
+    "tests": ["5769cf56-0dda-4bd5-bced-d3fd6329f4df", "07196024-4c3a-4c42-a6ef-e44544bd6e7c", "ecd1b023-0ad2-474f-8c9c-e8d7dd138d5a"]
   }],
   "urls": ["http://185.51.76.19:25002/"],
   "plugins": []
