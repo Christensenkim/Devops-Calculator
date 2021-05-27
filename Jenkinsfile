@@ -56,7 +56,7 @@ pipeline {
             steps {
                 sh "docker network create SE"
                 sh "docker run -d --rm -p 4444:4444 --net=SE --name selenium-hub selenium/hub"
-                sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox"
+                //sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox"
                 sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node-chrome"
                 sh "docker run -d --rm --net=SE --name app-test-container christensenkim/devopscalc-web:${BUILD_NUMBER}"
             }
@@ -64,7 +64,7 @@ pipeline {
         stage("Execute selenium") {
             steps {
                 sh 'sleep 10'
-                sh "selenium-side-runner --server http://localhost:4444/wd/hub -c 'browserName=firefox' --base-url http://app-test-container test/system/Devops-Calculator.side"
+                //sh "selenium-side-runner --server http://localhost:4444/wd/hub -c 'browserName=firefox' --base-url http://app-test-container test/system/Devops-Calculator.side"
                 sh "selenium-side-runner --server http://localhost:4444/wd/hub -c 'browserName=chrome' --base-url http://app-test-container test/system/Devops-Calculator.side"
             }
         }
