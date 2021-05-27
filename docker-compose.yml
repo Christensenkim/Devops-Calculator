@@ -9,6 +9,8 @@ services:
         MYSQL_DATABASE: CalculationsDB
     volumes:
         - ./db/data:/var/lib/mysql
+    ports:
+      - 33306:3306
 
   frontend:
     depends_on: 
