@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj": {}
+    "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj": {}
   },
   "projects": {
-    "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj": {
+    "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+        "projectUniqueName": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
         "projectName": "devops-calculator-api",
-        "projectPath": "C:\\Skole\\Devops-Calculator\\api\\devops-calculator-api.csproj",
-        "packagesPath": "C:\\Users\\rufst\\.nuget\\packages\\",
-        "outputPath": "C:\\Skole\\Devops-Calculator\\api\\obj\\",
+        "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\api\\devops-calculator-api.csproj",
+        "packagesPath": "C:\\Users\\Draik\\.nuget\\packages\\",
+        "outputPath": "C:\\Work-DevOps\\Devops-Calculator\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rufst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Draik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Skole\\Devops-Calculator\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Skole\\Devops-Calculator\\BLL\\BLL.csproj"
+              "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj"
               },
-              "C:\\Skole\\Devops-Calculator\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Skole\\Devops-Calculator\\DAL\\DAL.csproj"
+              "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj"
               }
             }
           }
@@ -70,21 +70,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Skole\\Devops-Calculator\\BLL\\BLL.csproj": {
+    "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Skole\\Devops-Calculator\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Skole\\Devops-Calculator\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\rufst\\.nuget\\packages\\",
-        "outputPath": "C:\\Skole\\Devops-Calculator\\BLL\\obj\\",
+        "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\Draik\\.nuget\\packages\\",
+        "outputPath": "C:\\Work-DevOps\\Devops-Calculator\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rufst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Draik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,8 +98,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Skole\\Devops-Calculator\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Skole\\Devops-Calculator\\DAL\\DAL.csproj"
+              "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj"
               }
             }
           }
@@ -128,21 +128,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Skole\\Devops-Calculator\\DAL\\DAL.csproj": {
+    "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Skole\\Devops-Calculator\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Skole\\Devops-Calculator\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\rufst\\.nuget\\packages\\",
-        "outputPath": "C:\\Skole\\Devops-Calculator\\DAL\\obj\\",
+        "projectPath": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Draik\\.nuget\\packages\\",
+        "outputPath": "C:\\Work-DevOps\\Devops-Calculator\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rufst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Draik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -192,7 +192,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

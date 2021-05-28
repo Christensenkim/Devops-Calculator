@@ -15,36 +15,32 @@ pipeline {
                             sh "docker build -t christensenkim/devopscalc:${BUILD_NUMBER} ."
                         }
                     },
-                    db: {
-                        dir("") {
-                            //sh "docker-compose up -d"
-                        }
-                    }
                 )
             }
         }
-
         stage("Test API") {
             steps {
                 sh "dotnet test XUnitTestCalculator/XUnitTestCalculator.csproj"
             }
         }
-        stage("Deliver Web") {
+        stage ("Deliver"){
             steps {
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-devopscalc', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
-                {
-                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
-                }
-                sh "docker push christensenkim/devopscalc-web:${BUILD_NUMBER}"
-            }
-        }
-        stage("Deliver API") {
-            steps {
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-devopscalc', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
-                {
-                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
-                }
-                sh "docker push christensenkim/devopscalc:${BUILD_NUMBER}"
+                parallel(
+                    web: {
+                        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-devopscalc', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
+                        {
+                            sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
+                        }
+                        sh "docker push christensenkim/devopscalc-web:${BUILD_NUMBER}"
+                    },
+                    api: {
+                        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-devopscalc', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
+                        {
+                            sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
+                        }
+                        sh "docker push christensenkim/devopscalc:${BUILD_NUMBER}"
+                    },
+                )
             }
         }
         stage("Release to test") {
